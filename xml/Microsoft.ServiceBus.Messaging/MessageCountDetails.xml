@@ -53,11 +53,11 @@
         <Parameter Name="transferDlqMessageCount" Type="System.Int64" />
       </Parameters>
       <Docs>
-        <param name="activeMessageCount">The number of active messages.</param>
-        <param name="deadletterMessageCount">The number of dead letters.</param>
-        <param name="scheduledMessageCount">The number of scheduled messages.</param>
-        <param name="transferMessageCount">The number of messages transferred to other queues, subscriptions, or topics.</param>
-        <param name="transferDlqMessageCount">The number of messages transferred to the dead letter queue.</param>
+        <param name="activeMessageCount">The number of messages in active state, available for retrieval.</param>
+        <param name="deadletterMessageCount">The number of messages in the dead-letter queue.</param>
+        <param name="scheduledMessageCount">The number of messages in scheduled state.</param>
+        <param name="transferMessageCount">The number of messages pending transfer to other queues or topics.</param>
+        <param name="transferDlqMessageCount">The number of messages having failed transfer and held in the transfer-dead-letter queue.</param>
         <summary>Initializes a new instance of the 
             <see cref="T:Microsoft.ServiceBus.Messaging.MessageCountDetails" /> class with the number of active messages, dead letters, scheduled messages, messages transferred to other queues, subscriptions, or topics, and the number of messages transferred to the dead letter queue.</summary>
         <remarks>To be added.</remarks>
@@ -81,7 +81,7 @@
         <ReturnType>System.Int64</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the number of active messages in the queue, topic, or subscription.</summary>
+        <summary>Gets number of messages in active state, available for retrieval.</summary>
         <value>Returns <see cref="T:System.Int64" /> that specifies the number of active messages.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -104,8 +104,8 @@
         <ReturnType>System.Int64</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the number of messages that are dead letters.</summary>
-        <value>Returns <see cref="T:System.Int64" />that specifies the number of messages that are dead letters.</value>
+        <summary>Gets the number of messages in the dead-letter queue.</summary>
+        <value>Returns <see cref="T:System.Int64" />that specifies the number of messages in the dead-letter queue.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -127,7 +127,7 @@
         <ReturnType>System.Int64</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the number scheduled messages.</summary>
+        <summary>Gets the number of messages in scheduled state.</summary>
         <value>Returns <see cref="T:System.Int64" />the number of scheduled messages.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -150,8 +150,8 @@
         <ReturnType>System.Int64</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the number messages transferred into dead letters.</summary>
-        <value>Returns <see cref="T:System.Int64" />that specifies the number messages transferred into dead letters.</value>
+        <summary>Gets the number of messages having failed transfer and held in the transfer-dead-letter queue.</summary>
+        <value>Returns <see cref="T:System.Int64" />that specifies the number messages held in the transfer-dead-letter queue.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -173,8 +173,8 @@
         <ReturnType>System.Int64</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Gets or sets the number of messages transferred to another queue, topic, or subscription.</summary>
-        <value>Returns <see cref="T:System.Int64" />that specifies the number of messages transferred to another queue, topic, or subscription</value>
+        <summary>Gets or sets the number of messages pending transfer into another queue or topic.</summary>
+        <value>Returns <see cref="T:System.Int64" />that specifies the number of messages pending transfer to another queue or topic</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
